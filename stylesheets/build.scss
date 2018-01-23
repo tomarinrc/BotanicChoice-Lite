@@ -1,2 +1,7 @@
+//Plugins
 @import 'plugins/neat/neat';
-@import  'components/header';
+@import 'plugins/breakpoint/breakpoint';
+
+//Components
+@import 'components/base';
+@import 'components/header';

@@ -1,3 +1,24 @@
 header {
     @include grid-container;
+    height: 92px;
+    .header-menu-icon {
+        @include grid-column(1);
+        i.fa.fa-bars {
+            color: $bc-darkgreen;
+            font-size: 32px;
+        }
+    }
+    .header-logo {
+        @include grid-column(3);
+        img {
+            height: 72px;
+        }
+    }
+    .header-cart-icon {
+        @include grid-column(1);
+        i.fa.fa-shopping-cart {
+            color: $bc-darkgreen;
+            font-size: 32px;
+        }
+    }
 }

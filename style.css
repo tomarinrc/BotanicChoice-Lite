@@ -1,6 +1,58 @@
-header::after {
-  clear: both;
-  content: "";
-  display: block; }
+html {
+  font: normal 100%/1.5 'PT Sans', sans-serif; }
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, dl, figure, blockquote, table, hr {
+  margin: 0 0 1.5rem 0; }
+
+h1 {
+  font-size: 1.802rem;
+  line-height: 1.66; }
+
+h2 {
+  font-size: 1.602rem;
+  line-height: 1.87; }
+
+h3 {
+  font-size: 1.424rem;
+  line-height: 1.05; }
+
+h4 {
+  font-size: 1.266rem;
+  line-height: 1.18; }
+
+h5 {
+  font-size: 1.125rem;
+  line-height: 1.33; }
+
+h6 {
+  font-size: 1rem;
+  line-height: 1.5; }
+
+header {
+  height: 92px; }
+  header::after {
+    clear: both;
+    content: "";
+    display: block; }
+  header .header-menu-icon {
+    width: calc(8.3333333333% - 21.6666666667px);
+    float: left;
+    margin-left: 20px; }
+    header .header-menu-icon i.fa.fa-bars {
+      color: #1F8948;
+      font-size: 32px; }
+  header .header-logo {
+    width: calc(25% - 25px);
+    float: left;
+    margin-left: 20px; }
+    header .header-logo img {
+      height: 72px; }
+  header .header-cart-icon {
+    width: calc(8.3333333333% - 21.6666666667px);
+    float: left;
+    margin-left: 20px; }
+    header .header-cart-icon i.fa.fa-shopping-cart {
+      color: #1F8948;
+      font-size: 32px; }
 
 /*# sourceMappingURL=style.css.map */
