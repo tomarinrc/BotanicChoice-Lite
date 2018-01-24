@@ -32,7 +32,9 @@ h6 {
   line-height: 1.5; }
 
 header {
-  position: relative;
+  position: fixed;
+  z-index: 97;
+  width: 100%;
   height: 72px;
   border-bottom: 2px solid #70BD77; }
   header::after {
@@ -44,15 +46,16 @@ header {
     text-decoration: none; }
   header .header-menu-icon {
     float: left;
-    margin: 25px 0 0 16px; }
+    margin: 23px 0 0 16px; }
     header .header-menu-icon i.fa.fa-bars {
       color: #1F8948;
-      font-size: 20.256px;
+      font-size: 22.256px;
       margin-left: 2.5px;
+      margin-bottom: 3px;
       float: left;
       clear: both; }
     header .header-menu-icon span.header-menu-caption {
-      font-size: 8.56px;
+      font-size: 9.256px;
       font-weight: bold;
       color: #1F8948;
       float: left;
@@ -74,5 +77,82 @@ header {
     header .header-cart-icon i.fa.fa-shopping-cart {
       color: #1F8948;
       font-size: 28.84px; }
+
+aside.sidebar {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  height: 100vh;
+  background: white;
+  transition: left 300ms;
+  overflow: hidden;
+  overflow-y: scroll; }
+  @media (min-width: 320px) {
+    aside.sidebar {
+      left: -70vw;
+      width: 70vw; } }
+  @media (min-width: 768px) {
+    aside.sidebar {
+      left: -320px;
+      width: 320px; } }
+  aside.sidebar.expand {
+    left: 0;
+    transition: left 500ms; }
+  aside.sidebar a.sidebar-item {
+    font-size: 1.125rem;
+    padding: 1.2em;
+    display: block;
+    border-bottom: 1px solid #dedede; }
+    aside.sidebar a.sidebar-item i {
+      font-weight: bold;
+      font-size: 1.266rem;
+      margin-top: -1.5px;
+      float: right; }
+      aside.sidebar a.sidebar-item i.fa-angle-left {
+        float: left;
+        margin-right: 1em; }
+    aside.sidebar a.sidebar-item.sidebar-acordion-toggle i:after {
+      content: '+'; }
+    aside.sidebar a.sidebar-item.sidebar-acordion-toggle.minus i:after {
+      content: '-'; }
+  aside.sidebar .sidebar-submenu {
+    position: absolute;
+    top: 0;
+    min-height: 100vh;
+    background: white;
+    transition: left 300ms; }
+    @media (min-width: 320px) {
+      aside.sidebar .sidebar-submenu {
+        left: 140vw;
+        width: 70vw; } }
+    @media (min-width: 768px) {
+      aside.sidebar .sidebar-submenu {
+        left: 640px;
+        width: 320px; } }
+    aside.sidebar .sidebar-submenu.expand {
+      left: 0;
+      transition: left 300ms; }
+    aside.sidebar .sidebar-submenu .sidebar-submenu-close {
+      background: #70BD77;
+      color: white; }
+  aside.sidebar .sidebar-accordion {
+    max-height: 0;
+    transition: max-height 200ms ease-out;
+    overflow: hidden; }
+    aside.sidebar .sidebar-accordion a.sidebar-item {
+      padding-left: 2em;
+      opacity: .87; }
+
+div.sidebar-overlay {
+  display: none;
+  position: fixed;
+  z-index: 98;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.48); }
+  div.sidebar-overlay.expand {
+    display: block; }
 
 /*# sourceMappingURL=style.css.map */
