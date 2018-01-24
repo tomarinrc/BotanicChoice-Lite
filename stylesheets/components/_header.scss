@@ -1,24 +1,51 @@
 header {
     @include grid-container;
-    height: 92px;
+    position: relative;
+    height: 72px;
+    border-bottom: 2px solid $bc-lightgreen;
+    a {
+        display: inline-block;
+        text-decoration: none;
+    }
     .header-menu-icon {
-        @include grid-column(1);
+        float: left;
+        margin: 25px 0 0 16px;
         i.fa.fa-bars {
             color: $bc-darkgreen;
-            font-size: 32px;
+            font-size: 20.256px;
+            margin-left: 2.5px; 
+            float: left;
+            clear: both;
+        }
+        span.header-menu-caption {
+            font-size: 8.56px;
+            font-weight: bold;
+            color: $bc-darkgreen;
+            float: left;
+            clear: both;
         }
     }
     .header-logo {
-        @include grid-column(3);
+        position: relative;
+        left: calc(50% - 85px);
         img {
-            height: 72px;
+            height: 64px;
+        }
+    }
+    .header-search-icon {
+        float: right;
+        margin: 23px 18px 0 0;
+        i.fa.fa-search {
+            color: $bc-darkgreen;
+            font-size: 25.63px;
         }
     }
     .header-cart-icon {
-        @include grid-column(1);
+        float: right;
+        margin: 22px 16px 0 0;
         i.fa.fa-shopping-cart {
             color: $bc-darkgreen;
-            font-size: 32px;
+            font-size: 28.84px;
         }
     }
 }
